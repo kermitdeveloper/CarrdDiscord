@@ -16,35 +16,6 @@
 </head>
 <body>
 
-  <div id="overlay">
-      <div class="message">Bem-vindo! Clique em qualquer lugar.</div>
-  </div>
-
-  <audio id="background-music" src="https://rr5---sn-gpv7ynee.googlevideo.com/videoplayback?expire=1731523296&ei=gJ40Z8_7C_jl6dsP-cfgyQo&ip=176.6.143.14&id=o-AL1hOsXCdLCBrT3ayOOX52TlCcO2nw8gKsR3uHjXD4dw&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AQn3pFQHJXTmAgu2ENvzS2QMMDwCUzkc4FTdJKiuFSIX5HR4LZbL8SEKm2Kq9LaczEznX6hFg9wCecv_&spc=qtApAf-EUlO6cR_RuF9ZFlDk_D5MMFbCD7IEdjzvlc4tlusfog&vprv=1&c=WEB&svpuc=1&mime=audio%2Fmp4&ns=DKRZgx30CxMiRRRgXxRBqj8Q&rqh=1&gir=yes&clen=317280660&dur=19604.653&lmt=1709803048733923&keepalive=yes&fexp=24350590,24350655,24350675,24350705,24350737,24350785,51299154,51312688,51326932&sefc=1&txp=4532434&n=NPMKzj3yTt4D6w&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Cc%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhANj2qTECx1Q1n_ny35VnWTPl9XXs7FXJennnunK9F8RdAiEAuGxu1HvsorMioKFnaOPD0_2AS82G21OpxjgPaHnbYFo%3D&rm=sn-uxax4vopj5qx-cxgs7l,sn-4g5erk76&rrc=79,104&req_id=5184b0d8e81aa3ee&rms=rdu,au&redirect_counter=2&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1731501714,&mh=Pr&mip=2804:29b8:5153:1619:9c0f:77e:a8a9:3dfc&mm=29&mn=sn-gpv7ynee&ms=rdu&mt=1731501408&mv=m&mvi=5&pl=48&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=AGluJ3MwRQIgZGUV2Y2aZQnogC0dnd1VQlGQQsO21a08vFyZXB2gEFkCIQDbOIc9FuYIpu4JrNLpozrpqO2WiPuUGK1gt9nhZ8lPZQ%3D%3D" preload="auto" loop></audio>
-
-  <script>
-      // JavaScript para gerenciar o evento de clique na sobreposição
-      const overlay = document.getElementById('overlay');
-      const audio = document.getElementById('background-music');
-
-      // Tocar a música ao clicar na sobreposição
-      overlay.addEventListener('click', function () {
-          audio.play().catch(error => {
-              console.error("Erro ao tocar a música:", error);
-          });
-
-          overlay.classList.add('fade-out');
-
-          // Remover a sobreposição do DOM após a animação
-          setTimeout(() => {
-              overlay.remove();
-          }, 1000); // Corresponde à duração da animação
-      });
-  </script>
-
-</body>
-<body>
-
 
   <div class="card-container">
     <!-- First Card -->
