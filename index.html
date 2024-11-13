@@ -14,9 +14,97 @@
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#232428">
   <title>Carrd | TheKermitPlayzzh</title>
 </head>
+
+<style>
+  /* Estilos para o corpo */
+  body {
+      height: 100vh;
+      /* Altura total da tela */
+      margin: 0;
+      /* Remove margens padrão */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      /* Remove rolagem */
+      position: relative;
+      /* Para posicionar o cursor animado */
+      cursor: url(http://www.rw-designer.com/cursor-view/19229.png), url(http://www.rw-designer.com/cursor-view/19229.png), auto !important;
+  }
+
+  /* Estilos para a sobreposição */
+  #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      /* Fundo preto com transparência moderada */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease-in;
+      /* Efeito de entrada */
+      z-index: 1000;
+      /* Z-index alto para ficar acima de outros elementos */
+  }
+
+  /* Efeito de desvanecimento */
+  .fade-out {
+      opacity: 0;
+      transition: opacity 1s ease-out;
+  }
+
+  /* Estilos para a mensagem */
+  .message {
+      font-size: 1.5em;
+      /* Tamanho da fonte */
+      color: white;
+      /* Cor do texto */
+      text-align: center;
+      /* Centraliza o texto */
+      margin-bottom: 20px;
+      /* Espaçamento abaixo da mensagem */
+  }
+
+  /* Animação de entrada */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+</style>
+</head>
+
 <body>
 
+<div id="overlay">
+  <div class="message">Bem-vindo! Clique em qualquer lugar.</div>
+</div>
 
+<audio id="background-music" src="music.mp3" preload="auto" loop></audio>
+
+<script>
+  // JavaScript para tocar a música automaticamente ao carregar a página
+  window.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('background-music');
+      audio.play().catch(error => {
+          console.error("Erro ao tocar a música automaticamente:", error);
+      });
+      
+      // Remover a sobreposição do DOM imediatamente
+      const overlay = document.getElementById('overlay');
+      overlay.remove();
+  });
+</script>
+
+
+</body>
   <div class="card-container">
     <!-- First Card -->
     <div class="card nitro-card">
